@@ -4,6 +4,7 @@
         • Exiba na consola uma mensagem indicando se o número é par ou ímpar."""
 
 # Pede ao utilizador um número inteiro
+
 Numero_Inteiro = input("Introduza um número inteiro, pf: ") 
 
 # Verifica se é um número inteiro e par (se não for inteiro e par, passa para o else)
