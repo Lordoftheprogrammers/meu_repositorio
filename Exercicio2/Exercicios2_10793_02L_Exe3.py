@@ -7,6 +7,7 @@
         • Se o número for par, exiba-o na consola. """
 
 #Função para verificar se um número é par ou ímpar
+
 def inteiro_par(num):
     if num % 2 == 0:
         return True
