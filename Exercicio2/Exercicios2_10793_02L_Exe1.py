@@ -7,7 +7,9 @@ Segundo_numero = input("Introduza outro número inteiro, pf: ")
 print("\n")
 print("Obrigado pelo seu input. Aqui estão os seus resultados:")
 print("\n")
+
 # Estas linhas dão o resultado das operações integradas numa frase explicativa
+
 print("    SOMA: A soma dos dois números dá " + str(int(Primeiro_numero)+int(Segundo_numero)))
 print("\n")
 print("    SUBTRAÇÃO: A subtração do primeiro número pelo segundo dá " + str(int(Primeiro_numero)-int(Segundo_numero)))
