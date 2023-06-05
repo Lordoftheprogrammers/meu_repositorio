@@ -8,6 +8,7 @@
 Numero_Inteiro = input("Introduza um número inteiro, pf: ") 
 
 # Verifica se é um número inteiro e par (se não for inteiro e par, passa para o else)
+
 if float(Numero_Inteiro)%2==0:
     print("O número que introduziu é um par inteiro!")
 else: 
