@@ -1,5 +1,6 @@
 # Exercício de Variáveis e Operações Matemáticas
 # As duas primeiras linhas pedem que o utilizador introduza os números
+
 print("\n")
 Primeiro_numero = input("Introduza um número inteiro, pf: ")
 print("\n")
