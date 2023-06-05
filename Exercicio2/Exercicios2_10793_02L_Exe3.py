@@ -15,6 +15,7 @@ def inteiro_par(num):
         return False
     
 # Criar uma lista vazia
+
 Lista = []
 
 # Ciclo Loop para introdução e verificação se se trata de um número par 
