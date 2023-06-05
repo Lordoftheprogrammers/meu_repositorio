@@ -19,6 +19,7 @@ def inteiro_par(num):
 Lista = []
 
 # Ciclo Loop para introdução e verificação se se trata de um número par 
+
 for index in range(5):
     # Vai adicionar no final da lista o novo número introduzido
     Lista.append(input("Introduza um número inteiro, pf: "))
