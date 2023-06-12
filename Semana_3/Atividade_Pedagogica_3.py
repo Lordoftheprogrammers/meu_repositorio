@@ -54,7 +54,7 @@ def visualizar_personagens(lista_personagens):
 def pesquisar_personagem(lista_personagens):
     nome = input("Digite o nome do personagem: ")
     for personagem in lista_personagens:
-        if personagem["Nome"]== nome:
+        if personagem["nome"]== nome:
             print("---------------------------")
             print("Nome:", personagem["nome"])
             print("Idade:", personagem["idade"])
