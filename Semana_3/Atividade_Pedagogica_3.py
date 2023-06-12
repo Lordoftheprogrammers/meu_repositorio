@@ -28,12 +28,12 @@ def adicionar_personagem(lista_personagens):
 
 # 2. Modificar um perfil de personagem existente;
 
-def modificar_perfil(perfil):
+def modificar_personagem(lista_personagens):
     return
 
 # 3. Remover um perfil de personagem;
 
-def remover_perfil(perfil):
+def remover_personagem(lista_personagens):
     return
 
 # 4. Visualizar a lista completa de personagens;
@@ -56,14 +56,17 @@ def pesquisar_perfil(perfil):
 
 while True:
     print("1. Adicionar personagem")
-    print("2. Visualizar personagens")
-    print("3. Sair")
+    print("2. Modificar personagem")
+    print("3. Remover personagem")
+    print("4. Visualizar personagens")
+    print("5. Pesquiser personagem")
+    print("6. Sair")
     opcao = int(input("Escolha uma opção: "))
     if opcao == 1:
         adicionar_personagem(lista_personagens)
-    elif opcao == 2:
+    elif opcao == 4:
         visualizar_personagens(lista_personagens)
-    elif opcao == 3:
+    elif opcao == 6:
         break
     else:
         print("Opção inválida. Tente novamente.")
