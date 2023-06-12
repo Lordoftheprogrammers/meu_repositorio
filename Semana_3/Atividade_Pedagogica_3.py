@@ -7,6 +7,22 @@ seguintes informações: nome, idade, profissão, hobbies e uma breve descriçã
 # Inicializar variáveis
 
 lista_personagens =[]
+personagem = {
+    "nome": "André",
+    "idade": 51,
+    "profissão": "Diretor",
+    "hobbies": "ler,desenhar",
+    "descrição": "descricao",
+    }
+lista_personagens.append(personagem)
+personagem = {
+    "nome": "Sofia",
+    "idade": 18,
+    "profissão": "Estudante",
+    "hobbies": "ler,desenhar",
+    "descrição": "descricao",
+    }
+lista_personagens.append(personagem)
 
 # 1. Adicionar um novo perfil de personagem;
 
@@ -29,6 +45,18 @@ def adicionar_personagem(lista_personagens):
 # 2. Modificar um perfil de personagem existente;
 
 def modificar_personagem(lista_personagens):
+    nome = input("Digite o nome do personagem: ")
+    Encontrou = 0
+    for personagem in lista_personagens:
+        if personagem["nome"]== nome:
+            Encontrou = 1
+            personagem["nome"]=input("Digite o nome do personagem: ")
+            personagem["idade"] = int(input("Digite a idade do personagem: "))
+            personagem["profissão"] = input("Digite a profissão do personagem: ")
+            personagem["hobbies"] = input("Digite os hobbies do personagem, separados por vírgula: ").split(",")
+            personagem["descrição"] = input("Digite uma breve descrição do personagem: ")
+    if Encontrou == 0:
+        print("Esse personagem não existe. Tente novamente.")
     return
 
 # 3. Remover um perfil de personagem;
@@ -73,6 +101,10 @@ while True:
     opcao = int(input("Escolha uma opção: "))
     if opcao == 1:
         adicionar_personagem(lista_personagens)
+    elif opcao == 2:
+        modificar_personagem(lista_personagens)
+    elif opcao == 3:
+        remover_personagem(lista_personagens)    
     elif opcao == 4:
         visualizar_personagens(lista_personagens)
     elif opcao == 5:
