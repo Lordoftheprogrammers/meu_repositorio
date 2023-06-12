@@ -51,7 +51,16 @@ def visualizar_personagens(lista_personagens):
 
 # 5. Pesquisar um personagem específico pelo nome.
 
-def pesquisar_perfil(perfil):
+def pesquisar_personagem(lista_personagens):
+    nome = input("Digite o nome do personagem: ")
+    for personagem in lista_personagens:
+        if personagem["Nome"]== nome:
+            print("---------------------------")
+            print("Nome:", personagem["nome"])
+            print("Idade:", personagem["idade"])
+            print("Profissão:", personagem["profissão"])
+            print("Hobbies:", ", ".join(personagem["hobbies"]))
+            print("Descrição:", personagem["descrição"])
     return
 
 while True:
@@ -59,13 +68,15 @@ while True:
     print("2. Modificar personagem")
     print("3. Remover personagem")
     print("4. Visualizar personagens")
-    print("5. Pesquiser personagem")
+    print("5. Pesquisar personagem")
     print("6. Sair")
     opcao = int(input("Escolha uma opção: "))
     if opcao == 1:
         adicionar_personagem(lista_personagens)
     elif opcao == 4:
         visualizar_personagens(lista_personagens)
+    elif opcao == 5:
+        pesquisar_personagem(lista_personagens)
     elif opcao == 6:
         break
     else:
