@@ -11,7 +11,7 @@ personagem = {
     "nome": "André",
     "idade": 51,
     "profissão": "Diretor",
-    "hobbies": "ler,desenhar",
+    "hobbies": ['ler', 'desenhar'],
     "descrição": "descricao",
     }
 lista_personagens.append(personagem)
@@ -19,7 +19,7 @@ personagem = {
     "nome": "Sofia",
     "idade": 18,
     "profissão": "Estudante",
-    "hobbies": "ler,desenhar",
+    "hobbies": ['ler', 'desenhar'],
     "descrição": "descricao",
     }
 lista_personagens.append(personagem)
@@ -62,6 +62,10 @@ def modificar_personagem(lista_personagens):
 # 3. Remover um perfil de personagem;
 
 def remover_personagem(lista_personagens):
+    nome = input("Digite o nome do personagem: ")
+    for personagem in lista_personagens:
+        if personagem["nome"]==nome:
+            lista_personagens.remove(personagem)
     return
 
 # 4. Visualizar a lista completa de personagens;
@@ -75,6 +79,7 @@ def visualizar_personagens(lista_personagens):
         print("Hobbies:", ", ".join(personagem["hobbies"]))
         print("Descrição:", personagem["descrição"])
         lista_personagens = []
+    print("---------------------------")
     return
 
 # 5. Pesquisar um personagem específico pelo nome.
