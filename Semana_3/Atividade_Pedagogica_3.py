@@ -6,7 +6,7 @@ seguintes informações: nome, idade, profissão, hobbies e uma breve descriçã
 
 # Inicializar variáveis
 
-lista_personagens ={}
+lista_personagens =[]
 
 # 1. Adicionar um novo perfil de personagem;
 
@@ -47,6 +47,7 @@ def visualizar_personagens(lista_personagens):
         print("Hobbies:", ", ".join(personagem["hobbies"]))
         print("Descrição:", personagem["descrição"])
         lista_personagens = []
+    return
 
 # 5. Pesquisar um personagem específico pelo nome.
 
@@ -67,10 +68,3 @@ while True:
     else:
         print("Opção inválida. Tente novamente.")
         continue
-
-
-
-
-
-3 de 3
-
