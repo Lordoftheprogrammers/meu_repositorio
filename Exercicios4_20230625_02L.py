@@ -19,4 +19,4 @@ consumo_2000 = data_portugal['2000 [YR2000]'].values[0]
 
 # Calcular e imprimir a variação percentual
 variacao_percentual = calcular_variacao_percentual(consumo_1990, consumo_2000)
-print(variacao_percentual)
+print(str(round(variacao_percentual,2))+"%")
