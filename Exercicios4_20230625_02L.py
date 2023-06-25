@@ -27,6 +27,15 @@ consumo_2000 = data_portugal['2000 [YR2000]'].values[0]
 
 # Calcular e imprimir a variação percentual
 variacao_percentual = calcular_variacao_percentual(consumo_1990, consumo_2000)
-# Chamamos a função
-print("A variação de consumo de energia per capita (kWh), em Portugal, entre 1990 e 2000, foi de " + str(round(variacao_percentual,2))+"%. Um aumento muito significativo.")
-# Imprimimos o resultado e comentamos.
+# Chamámos a função
+
+# Aqui coloco uma ideia adicional, para que haja um comentário dependente do valor que for calculado
+
+if variacao_percentual > 25:
+    comentario = "Um aumento muito significativo."
+else:
+    comentario = "Um aumento expectável, dada a evolução típica de consumo de um país desenvolvido nessa década."
+
+# Finalmente, imprimimos o resultado e comentamos.
+
+print("A variação de consumo de energia per capita (kWh), em Portugal, entre 1990 e 2000, foi de " + str(round(variacao_percentual,2))+"%. " + comentario)
