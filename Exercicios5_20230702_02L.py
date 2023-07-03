@@ -59,10 +59,10 @@ for linha in range(len(data_ordenada_qtd_2)):
             data_ordenada_qtd_2.loc[linha_2+1] = _
 print(data_ordenada_qtd_2)
 
-# Gráfico de Barras
+# Gráfico de Barras da 1
 
-categorias = data_ordenada_qtd_2['produto']
-valores = data_ordenada_qtd_2['quantidade_vendida']
+categorias = data_ordenada_qtd_1['produto']
+valores = data_ordenada_qtd_1['quantidade_vendida']
 
 plt.bar(categorias, valores)
 plt.xlabel("Categorias")
@@ -70,10 +70,10 @@ plt.ylabel("Valores")
 plt.title("Gráfico de Barras")
 plt.show()
 
-# Gráfico de Barras
+# Gráfico de Barras da 2
 
-categorias = data_ordenada_qtd_1['produto']
-valores = data_ordenada_qtd_1['quantidade_vendida']
+categorias = data_ordenada_qtd_2['produto']
+valores = data_ordenada_qtd_2['quantidade_vendida']
 
 plt.bar(categorias, valores)
 plt.xlabel("Categorias")
