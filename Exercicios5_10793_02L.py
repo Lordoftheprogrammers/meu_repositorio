@@ -97,7 +97,7 @@ def Mostrar_df_em_grafico(titulo, dataframe, categoria, valor):
     plt.title(titulo)
     plt.show()
 
-# Ordenar de várias maneiras, mostrando uma mensagem e um gráfico para cada uma
+# Ordenar de várias maneiras, mostrando um gráfico para cada uma
 
 Mostrar_df_em_grafico("Timsort", data.sort_values('quantidade_vendida'),'produto','quantidade_vendida')
 Mostrar_df_em_grafico("Bubble sort", bubble_sort(data,'quantidade_vendida'),'produto','quantidade_vendida')
