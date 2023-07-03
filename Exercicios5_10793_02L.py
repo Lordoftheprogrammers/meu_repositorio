@@ -78,7 +78,7 @@ def insertion_sort(dataframe, coluna):
 
 # Gráfico de Barras para dataframes
 
-def Mostrar_df_em_grafico(titulo, dataframe, categoria, valor):
+def mostrar_df_em_grafico(titulo, dataframe, categoria, valor):
 
     """# A Função Mostrar_df_em_grafico:
        ## 1. Recebe quatro parâmetros:
@@ -99,6 +99,6 @@ def Mostrar_df_em_grafico(titulo, dataframe, categoria, valor):
 
 # Ordenar de várias maneiras, mostrando um gráfico para cada uma
 
-Mostrar_df_em_grafico("Timsort", data.sort_values('quantidade_vendida'),'produto','quantidade_vendida')
-Mostrar_df_em_grafico("Bubble sort", bubble_sort(data,'quantidade_vendida'),'produto','quantidade_vendida')
-Mostrar_df_em_grafico("Insertion sort", insertion_sort(data,'quantidade_vendida'),'produto','quantidade_vendida')
+mostrar_df_em_grafico("Timsort", data.sort_values('quantidade_vendida'),'produto','quantidade_vendida')
+mostrar_df_em_grafico("Bubble sort", bubble_sort(data,'quantidade_vendida'),'produto','quantidade_vendida')
+mostrar_df_em_grafico("Insertion sort", insertion_sort(data,'quantidade_vendida'),'produto','quantidade_vendida')
