@@ -16,40 +16,53 @@ comentários claros que expliquem o funcionamento do código.
 
 # 1. Importar dados
 
-# importar a biblioteca pandas
+# importar a biblioteca pandas e a matplot lib para mais tarde fazer os gráficos
 import pandas as pd
-import math
+import matplotlib.pyplot as plt
+
 
 # Carregar dados do Excel
-data = pd.read_excel('P_Data_Extract_From_World_Development_Indicators.xlsx', sheet_name='Data')
+data = pd.read_csv('AtividadePedagogica4_10793_02.csv')
 # Para simplificar, coloquei o ficheiro excel na mesma pasta que o código
 
-# Seleccionar colunas e limpar dados
+# Limpeza de dados e reindexação da dataframe (caso fosse necessário)
 
-data = data[['Country Name', '1990 [YR1990]', '2000 [YR2000]']]
-data = data[(data['Country Name'].notnull())&(data['1990 [YR1990]']!='..')&(data['2000 [YR2000]']!='..')]
-data = data.reset_index(drop=True)
+"""
+data = data[(data['Coluna_1'].notnull())&(data['Coluna_1']!='..')]
+data = data.reset_index(drop=True) 
+"""
 
-# 2. Ordenar dados (1 vez pelo default do Python, outra pelo Bubble Sort)
+# 2. Agrupar os valores por categoria
+
+data = data.groupby('produto')['quantidade_vendida'].sum()
+data = data.reset_index()
+
+print("Agregada: ",data)
+
+# 3. Ordenar dados (1 vez pelo default do Python, outra pelo Bubble Sort)
 
 # Ordenar pelo deafult do Python
-data_ordenada_1990_1=data.sort_values('1990 [YR1990]')
-
+data_ordenada_qtd_1=data.sort_values('quantidade_vendida')
+print("Sort pré-definido no Python:", data_ordenada_qtd_1)
 # Ordenar pelo Bubble sort
 
-data_ordenada_1990_2=data.copy()
+data_ordenada_qtd_2=data.copy()
 
-for linha in range(len(data_ordenada_1990_2)):
-    for linha_2 in range(len(data_ordenada_1990_2)-linha-1):
-        if data_ordenada_1990_2.iloc[linha_2]['1990 [YR1990]'] > data_ordenada_1990_2.iloc[linha_2+1]['1990 [YR1990]']:
-            _ = data_ordenada_1990_2.iloc[linha_2].copy()
-            data_ordenada_1990_2.iloc[linha_2] = data_ordenada_1990_2.loc[linha_2+1]
-            data_ordenada_1990_2.loc[linha_2+1] = _
+for linha in range(len(data_ordenada_qtd_2)):
+    print("linha: ", linha)
+    for linha_2 in range(len(data_ordenada_qtd_2)-linha-1):
+        print("linha_2: ", linha_2)
+        if data_ordenada_qtd_2.iloc[linha_2]['quantidade_vendida'] > data_ordenada_qtd_2.iloc[linha_2+1]['quantidade_vendida']:
+            print(data_ordenada_qtd_2)
+            _ = data_ordenada_qtd_2.iloc[linha_2].copy()
+            data_ordenada_qtd_2.iloc[linha_2] = data_ordenada_qtd_2.loc[linha_2+1]
+            data_ordenada_qtd_2.loc[linha_2+1] = _
+print(data_ordenada_qtd_2)
 
 # Gráfico de Barras
 
-categorias = data
-valores = [4, 7, 2]
+categorias = data_ordenada_qtd_2['produto']
+valores = data_ordenada_qtd_2['quantidade_vendida']
 
 plt.bar(categorias, valores)
 plt.xlabel("Categorias")
@@ -57,3 +70,13 @@ plt.ylabel("Valores")
 plt.title("Gráfico de Barras")
 plt.show()
 
+# Gráfico de Barras
+
+categorias = data_ordenada_qtd_1['produto']
+valores = data_ordenada_qtd_1['quantidade_vendida']
+
+plt.bar(categorias, valores)
+plt.xlabel("Categorias")
+plt.ylabel("Valores")
+plt.title("Gráfico de Barras")
+plt.show()
