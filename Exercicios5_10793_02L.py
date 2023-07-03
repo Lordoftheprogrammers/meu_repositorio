@@ -1,17 +1,14 @@
-""" Exercício
+""" Exercício 5 - 20230702 - 10793_02L
+
 Para este exercício, utilize os dados do ficheiro CSV da Atividade Pedagógica 4 - parte 2 (CSV 
 Ficheiro). Link para o ficheiro: https://moodle.eisnt.com/mod/resource/view.php?id=31890
-1. Importar Dados: Escreva um script em Python para importar os dados para o seu 
-programa. Isso pode envolver a leitura de um arquivo CSV, Excel, ou qualquer outro 
-formato de sua escolha.
-2. Aplicar Algoritmos de Ordenação: utilize dois algoritmos de ordenação diferentes 
-para ordenar os produtos com base no número de vendas de forma ascendente.
-3. Apresentar Resultados: Crie um gráfico de barras com o matplotlib para apresentar 
-de forma ascendente os produtos com o seu total número de vendas.
-4. PEP 8: Certifique-se de que o seu código adere às convenções de estilo descritas no 
-PEP 8. Consulte o PEP 8 para mais detalhes.
-5. Documentação e Comentários: Documente o seu código adequadamente e escreva 
-comentários claros que expliquem o funcionamento do código.
+
+1. Importar Dados: Escreva um script em Python para importar os dados para o seu programa. Isso pode envolver a leitura de um arquivo CSV, Excel, ou qualquer outro formato de sua escolha.
+2. Aplicar Algoritmos de Ordenação: utilize dois algoritmos de ordenação diferentes para ordenar os produtos com base no número de vendas de forma ascendente.
+3. Apresentar Resultados: Crie um gráfico de barras com o matplotlib para apresentar de forma ascendente os produtos com o seu total número de vendas.
+4. PEP 8: Certifique-se de que o seu código adere às convenções de estilo descritas no PEP 8. Consulte o PEP 8 para mais detalhes.
+5. Documentação e Comentários: Documente o seu código adequadamente e escreva comentários claros que expliquem o funcionamento do código.
+
 """
 
 # 1. Importar dados
