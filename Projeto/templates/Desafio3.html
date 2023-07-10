@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+ <meta charset="UTF-8">
+ <title>Desafio</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+ <h1>Desafio Final!</h1>
+ <p>Qual o nome da biblioteca com que foi feito este site?</p>
+
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+ {% for category, message in messages %}
+ <p style="color: {{ 'red' if category == 'error' else 'green' }}">{{ message }}</p>
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+ <form method="POST" action="{{ url_for('Desafio3') }}">
+ {{ form.hidden_tag() }}
+ {{ form.resposta() }}
+ {{ form.submit() }}
+ </form>
+</body>
+</html>

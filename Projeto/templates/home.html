@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+ <meta charset="UTF-8">
+ <title>Desafios da sua vida</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+ <h1>Bem-vindo aos desafios da sua vida!</h1>
+ <p>Vamos fazer-lhe perguntas do tipo: Qual a cor do cavalo branco de Napoleão? [Responda com uma única palavra]</p>
+
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+ {% for category, message in messages %}
+ <p style="color: {{ 'red' if category == 'error' else 'green' }}">{{ message }}</p>
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+
+ <form method="POST" action="{{ url_for('home') }}">
+ {{ form.hidden_tag() }}
+ {{ form.resposta() }}
+ {{ form.submit() }}
+ </form>
+</body>
+</html>
